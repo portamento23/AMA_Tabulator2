@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js" ></script>
+    <link href="../assets/ionicons/css/ionicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <style media="screen">
+
+    .vertical-center {
+      /* min-height: 100%;
+      min-height: 100vh;  */
+
+      display: flex;
+      align-items: center;
+      }
+    .username{
+      font-size: 12px;
+    }
+    .sideNav-menus-font{
+      font-size: 12px;
+    }
+
+    .feather {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      margin-right: 10px;
+
+      }
+    .feather:hover{
+      stroke:#007bff;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="w3-sidebar bg-dark pt-3 w3-bar-block animated bounceInLeft" style="display:none" id="mySidebar">
+        <div class="text-center mt-5">
+          <img src="../assets/images/icon.png" class="rounded" width="100px" height="100px" style="border:0px solid white;border-radius:50%!important;" alt="profile_picture">
+          <div id="username" class="mt-2 text-white username" data-toggle="tooltip" data-placement="top" title="Click to Edit Profile"></div>
+        </div>
+
+        <div class="container p-2 m-2 text-white">
+          <div id="side-nav" class="username mr-3 ml-3 nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+          </div>
+        </div>
+    </div>
+    <div id="main" class="w-100" style="padding:0px!important">
+      <nav class="navbar navbar-dark bg-success justify-content-between">
+        <a class="navbar-brand text-white">SAC EVENT TABULATION SYSTEM</a>
+        <form class="form-inline">
+          <button onclick="logout()" class="mr-3 btn btn-outline-light my-2 my-sm-0">Log out</button>
+        </form>
+      </nav>
+
+      <div class="container">
+        <div id = "ultimateMainContainer">
+
+        </div>
+      </div>
+
+
+    </div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
+
+
+<script type="text/babel" src="app.js"></script>
+<script type="text/babel" src="dashboard.js"></script>
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAkT-bhaPAXl-dCGkPbQUZWSWkpY_Bz664",
+    authDomain: "sacjudge-d22dc.firebaseapp.com",
+    databaseURL: "https://sacjudge-d22dc.firebaseio.com",
+    projectId: "sacjudge-d22dc",
+    storageBucket: "sacjudge-d22dc.appspot.com",
+    messagingSenderId: "227280456315"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/babel" src="index.js"></script>
+
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "14.7%";
+  document.getElementById("mySidebar").style.width = "15%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+  document.getElementById("closeNav").style.display = "inline-block";
+}
+
+w3_open();
+  feather.replace();
+
+</script>
+</script>
+  </body>
+</html>

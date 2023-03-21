@@ -1,0 +1,17 @@
+{
+  "name": "ijudge",
+  "version": "1.0.0",
+  "description": "Portfolio Project",
+  "scripts": {
+    "lite": "lite-server -port 10001",
+    "start": "npm run lite"
+  },
+  "browser":{
+    "vue":"portfol/Portfolio/Portfolio/public/dist/vue.common"
+  },
+  "author":"",
+  "license": "ISC",
+  "devDependencies":{
+      "lite-server":"^1.3.1"
+  }
+}

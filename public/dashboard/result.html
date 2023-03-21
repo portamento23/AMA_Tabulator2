@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js" ></script>
+    <link href="../assets/ionicons/css/ionicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <style>
+      .mar200Top{
+        margin-top: 200px;
+      }
+    </style
+  </head>
+  <body>
+    <div class = "row mt-3 w-100">
+   
+      <div class = "col-sm-12 mt-1">
+        <center>
+        <img src="../assets/images/sac.png" width="100px">
+        <h1 class = "text-secondary">ST. ANTHONY'S COLLEGE</h1>
+       <h3>San Jose, Antique</h3>
+        <div class="text-center" id = "dateAndTime">
+        </div>
+        <div class="form-group text-center">
+              <input
+                class="form-control text-dark bg-transparent border-0 text-center"
+                placeholder="Enter Time Here"
+              />
+              <input
+                class="form-control text-dark bg-transparent border-0 text-center"
+                placeholder="Enter Venue Here"
+              />
+        </div>
+        <div class="form-group text-center">
+             
+        </div>
+
+        </center>
+      </div>
+ 
+    </div>
+    <div class="row m-5 d-print-none" id = "printingOptions">
+    
+    </div>
+    <div id ="mainContainer" class="row m-5">
+
+    </div>
+
+
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAkT-bhaPAXl-dCGkPbQUZWSWkpY_Bz664",
+      authDomain: "sacjudge-d22dc.firebaseapp.com",
+      databaseURL: "https://sacjudge-d22dc.firebaseio.com",
+      projectId: "sacjudge-d22dc",
+      storageBucket: "sacjudge-d22dc.appspot.com",
+      messagingSenderId: "227280456315"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="result.js" type="text/babel">
+  <script src="judgeDetails.js" type="text/babel">
+
+  </script>
+</html>

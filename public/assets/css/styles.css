@@ -1,0 +1,21 @@
+body{
+  background-color:#f7f7f9 !important;
+
+}
+.custom-sidenav{
+  height: 100vh;
+  position: fixed;
+  margin: none!important;
+  left: -10px;
+
+}
+
+.dark-grey{
+  background-color: #353535;
+}
+.custom-active{
+background-color: #28a745;
+}
+.modal-backdrop {
+    display: none!important;
+}

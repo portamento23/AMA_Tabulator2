@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V12</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+<style media="screen">
+* { box-sizing: border-box; }
+.video-background {
+background: #000;
+position: fixed;
+top: 0; right: 0; bottom: 0; left: 0;
+z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+}
+#vidtop-content {
+top: 0;
+color: #fff;
+}
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+.video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+.video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+</style>
+</head>
+<body>
+	<div class="video-background">
+	<div class="video-foreground">
+		<!-- <iframe src="https://www.youtube.com/embed/JQGRg8XBnB4?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=JQGRg8XBnB4" frameborder="0" allowfullscreen></iframe> -->
+
+	</div>
+	</div>
+	<div class="limiter">
+		<div class="container-login100">
+		<div class="container-login100" style="background-image: url('images/sac.jpg');">
+			<center>
+			<div class="wrap-login100 p-t-190 p-b-30">
+				<!-- <form class="login100-form validate-form" method="post"> -->
+					<div class="login100-form-avatar">
+						<img src="images/icon.png" alt="AVATAR">
+					</div>
+
+					<span class="login100-form-title p-t-20 p-b-45">
+						SAC EVENT TABULATION SYSTEM
+					</span>
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						<input class="input100" type="text" id ="email_field" name="username" placeholder="Username">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+						<input class="input100" type="password" id ="password_field" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock"></i>
+						</span>
+					</div>
+
+					<div class="container-login100-form-btn p-t-10">
+						<input type="submit" onclick="login()"  value="Login" name="submit_login" class="login100-form-btn">
+					</div>
+
+
+					<div class="text-center w-full p-t-25 p-b-230">
+						<a href="#" class="txt1">
+							<!-- Forgot Username / Password? -->
+
+						</a>
+					</div>
+
+					<div class="text-center w-full">
+						<a class="txt1" href="#">
+							<!-- Create new account -->
+
+						</a>
+					</div>
+				<!-- </form> -->
+			</div>
+		</center>
+		</div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyAkT-bhaPAXl-dCGkPbQUZWSWkpY_Bz664",
+	    authDomain: "sacjudge-d22dc.firebaseapp.com",
+	    databaseURL: "https://sacjudge-d22dc.firebaseio.com",
+	    projectId: "sacjudge-d22dc",
+	    storageBucket: "sacjudge-d22dc.appspot.com",
+	    messagingSenderId: "227280456315"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+<script type="text/javascript" src="../js/auth.js"></script>
+
+</body>
+</html>
