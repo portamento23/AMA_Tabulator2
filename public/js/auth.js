@@ -1,5 +1,5 @@
  var server = "http://localhost:5000";
-// server = "https://sacjudge-d22dc.firebaseapp.com";
+// server = "https://tabulator-bf102.web.app";
 
 
   firebase.auth().onAuthStateChanged(function(user) {
